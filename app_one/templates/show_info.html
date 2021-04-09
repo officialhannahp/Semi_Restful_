@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'show_info.css' %}">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <a href="/shows" class="back">Go Back</a>
+    <h1>TV Show {{ show.id }}</h1>
+    <p>Title: {{ show.title }}</p>
+    <p>Network: {{ show.network }}</p>
+    <p>Release Date: {{ show.release_date }}</p>
+    <p>Description: {{ show.desc }}</p>
+    <p>
+        <a href="/shows/{{show.id}}/edit" class="button">Edit</a> |
+        <a href="/shows/{{book.id}}/destroy" class="button">Delete</a>
+    </p>
+</body>
+
+</html>

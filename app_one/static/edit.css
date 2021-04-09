@@ -1,0 +1,44 @@
+.container{
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.back{
+    float: right;
+    color: #C9C9C9;
+}
+
+h1{
+    color: rgb(82, 79, 79);
+    font-size: 50px;
+    text-align: center;
+    margin: 60px;
+    white-space: nowrap;
+    padding
+}
+
+div{
+    /* display: flex; */
+    align-items: center
+}
+
+input{
+    width:400px;
+    margin: 15px;
+}
+
+label{
+    color: rgb(82, 79, 79);
+    padding-top: 19px;
+
+}
+
+.button{
+    width: 200px;
+    text-align: center;}

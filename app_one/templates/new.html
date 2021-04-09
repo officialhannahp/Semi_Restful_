@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'new.css' %}">
+    <title>Document</title>
+</head>
+
+<body class="container">
+    <a href="/shows" class="back">Go Back</a>
+    <h1>Add a New show</h1>
+
+    {% if messages %}
+    <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="/shows/create" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="title">Title</label><br>
+            <input type="text" name="title" id="title"><br>
+            <label for="network">Network</label><br>
+            <input type="text" name="network" id="network"><br>
+            <label for="date">Release Date</label><br>
+            <input type="date" id="date" name="date"><br>
+            <label for="desc">Description</label><br>
+            <input type="text" name="desc" id="desc"><br>
+            <input class="button" type="submit" value="add">
+        </div>
+    </form>
+</body>
+
+</html>
